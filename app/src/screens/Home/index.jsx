@@ -14,6 +14,8 @@ import {
   Footer,
   ButtonAddCard,
   ButtonAddCardText,
+  Empty,
+  EmptyTitle
 } from "./styles";
 
 export function Home() {
@@ -125,6 +127,12 @@ export function Home() {
           onChangeText={(t) => setSearchText(t)}
         />
         <Main>
+          {notes.length < 1
+          ?
+          <Empty>
+            <EmptyTitle>Clique no Botão de +, para adiconar um Card!</EmptyTitle>
+          </Empty>
+          :
           <FlatList
             data={notes}
             keyExtractor={(item) => item.slip.id}
@@ -135,6 +143,7 @@ export function Home() {
               </Card>
             )}
           />
+        } 
         </Main>
        
       </Container>

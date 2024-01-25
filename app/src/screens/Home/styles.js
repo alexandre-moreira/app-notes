@@ -96,3 +96,15 @@ export const ButtonAddCardText = styled.Text`
   font-size: 40px;
   color: #fff;
 `;
+
+export const Empty = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items:center ;
+`;
+
+export const EmptyTitle = styled.Text`
+  font-size: 16px;
+  color: #444442;
+  margin-bottom: 100px;
+`;
